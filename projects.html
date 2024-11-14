@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeler - Portföy</title>
+    <link rel="stylesheet" href="css/projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo-mobile">Mehmet Ali GÜMÜŞLER</div>
+            <div class="menu-toggle" id="mobile-menu-toggle">&#9776;</div>
+            <ul class="navbar" id="navbar">
+                <div id="logo">Mehmet Ali GÜMÜŞLER</div>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkında</a></li>
+                <li><a href="projects.html">Projeler</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="filter-buttons"> 
+            <button class="filter-button" onclick="filterProjects('all')">Hepsi</button>
+            <button class="filter-button" onclick="filterProjects('csharp')">C#</button>
+            <button class="filter-button" onclick="filterProjects('java')">Java</button>
+            <button class="filter-button" onclick="filterProjects('python')">Python</button>
+        </div>
+        <div class="slider-container">
+            <div class="projects-container">
+                <div class="project" data-category="csharp" onclick="openModal(this)" data-title="Kütüphane Yönetim Sistemi" data-description="C# ile kapsamlı bir kütüphane yönetim sistemi geliştirildi. Kitap ekleme, silme ve arama gibi işlevler içerir.">
+                    <img src="images/app-1.jpg" alt="Kütüphane Yönetim Sistemi">
+                    <h3>Kütüphane Yönetim Sistemi</h3>
+                </div>
+                <div class="project" data-category="java" onclick="openModal(this)" data-title="Medikal Mağaza Yönetim Sistemi" data-description="Envanter yönetimi, satış işleme ve raporlama işlevlerini içeren bir sistem geliştirildi.">
+                    <img src="images/app-2.jpg" alt="Medikal Mağaza Yönetim Sistemi">
+                    <h3>Medikal Mağaza Yönetim Sistemi</h3>
+                </div>
+                <div class="project" data-category="java" onclick="openModal(this)" data-title="Çizgi Roman Koleksiyonu Yönetimi" data-description="JavaFX ile kullanıcı dostu bir arayüz tasarlayarak çizgi roman koleksiyonu yönetim uygulaması geliştirildi.">
+                    <img src="images/app-3.jpg" alt="Çizgi Roman Koleksiyonu Yönetimi">
+                    <h3>Çizgi Roman Koleksiyonu Yönetimi</h3>
+                </div>
+                <div class="project" data-category="python" onclick="openModal(this)" data-title="Sanal Giyim Deneme Sistemi" data-description="Kullanıcıların kamerayı kullanarak gerçek zamanlı kıyafet denemelerini sağlayan bir sanal deneme sistemi geliştirildi.">
+                    <img src="images/app-4.jpg" alt="Sanal Giyim Deneme Sistemi">
+                    <h3>Sanal Giyim Deneme Sistemi</h3>
+                </div>
+                <div class="project" data-category="python" onclick="openModal(this)" data-title="Taret Projesi" data-description="Savunma sanayine yönelik nesne tanıma ve tespit odaklı otonom bir taret sistemi geliştirildi.">
+                    <img src="images/app-5.jpg" alt="Taret Projesi">
+                    <h3>Taret Projesi</h3>
+                </div>
+                <div class="project" data-category="python" onclick="openModal(this)" data-title="Jetson Nano ile Yüz Tanıma Sistemi" data-description="Güvenlik ve erişim kontrol uygulamaları için Jetson Nano üzerinde yüz tanıma sistemi geliştirildi.">
+                    <img src="images/app-6.jpg" alt="Jetson Nano ile Yüz Tanıma Sistemi">
+                    <h3>Jetson Nano ile Yüz Tanıma Sistemi</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="projectModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg" class="modal-content">
+        <div id="modalCaption"></div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

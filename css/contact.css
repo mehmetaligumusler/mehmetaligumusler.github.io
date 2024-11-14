@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    color: #000;
+    font-family: 'Roboto Slab', sans-serif;
+    background-color: #e2e2e2;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    list-style-type: none;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center; 
+    padding: 0 20px;
+}
+
+.navbar li {
+    padding: 24px 16px;
+}
+
+.navbar li a {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar li a:hover {
+    color: rgb(224, 32, 32);
+   
+}
+
+#logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 24px 16px; 
+}
+
+#time {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding: 24px 16px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-container h2 {
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.contact-container p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form .submit-btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form .submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #logo-mobile
+    {
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        padding: 24px 16px;
+    }
+}

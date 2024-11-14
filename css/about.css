@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    color: #000;
+    font-family: 'Roboto Slab', sans-serif;
+    background-color: #e2e2e2;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    list-style-type: none;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.navbar li {
+    padding: 24px 16px;
+}
+
+.navbar li a {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar li a:hover {
+    color: rgb(224, 32, 32);
+}
+
+#logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 24px 16px; 
+}
+
+#time {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding: 24px 16px;
+    text-align: center;
+}
+
+.full-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 1px;
+    gap: 30px;
+}
+
+.about-content {
+    flex: 50%;
+}
+
+.profile-picture img {
+    width: 350px;
+    height: auto;
+}
+
+.profile-picture {
+    float: right;
+}
+
+.profile-info {
+    flex: 50%;
+}
+
+.profile-info p {
+    max-width: 500px;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #000000;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.profile-info h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.info-list li strong {
+    color: #000000;
+}
+
+.extra-content {
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease; 
+    margin-top: 10px;
+}
+
+.extra-content.show {
+    max-height: 300px; 
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffffff00;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px; 
+    transition: background-color 0.3s ease;
+}
+
+.about-btn:hover {
+    cursor: pointer;
+    background: #000000;
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    .menu-toggle:hover {
+        color: rgb(18, 76, 193);
+    }
+
+    .navbar.active {
+        max-height: 300px;
+    }
+
+    #logo {
+        text-align: center;
+        padding-top: 10px; 
+        font-size: 18px;
+    }
+
+    .profile-picture {
+        float: none;
+        text-align: center;
+    }   
+
+    #time {
+        font-size: 20px;
+        text-align: center;
+        padding: 1px;
+        margin-bottom: 5px;
+    }
+
+    .full-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        padding-top: 1px;
+        flex-wrap: wrap;
+    }
+
+    .profile-picture img {
+        width: 150px;
+        height: auto;
+    }
+
+    .profile-info {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .profile-info h2, .profile-info h3 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .profile-info p {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+
+    .info-list li {
+        font-size: 14px;
+    }
+
+    .about-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin-top: 15px;
+    }
+
+    .extra-content.show {
+        max-height: 500px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        padding-top: 20px;
+        gap: 5px;
+    }
+
+    .profile-picture img {
+        width: 200px;
+        height: auto;
+    }
+
+    .profile-info h2, .profile-info h3 {
+        text-align: center;
+    }
+
+    #logo{
+        display: none;
+    }
+
+    #logo-mobile
+    {
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        padding: 24px 16px;
+    }
+}
