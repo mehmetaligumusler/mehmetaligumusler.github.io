@@ -1,0 +1,122 @@
+.page {
+  gap: var(--static-space-40);
+  padding-top: clamp(2rem, 6vw, 5rem);
+  padding-bottom: 4rem;
+}
+
+.intro {
+  display: flex;
+  max-width: 800px;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.intro h1 {
+  margin: 0;
+  letter-spacing: -0.055em;
+}
+
+.intro p {
+  margin: 0;
+}
+
+.contactRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.contactItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* PDF / Print download action row */
+.actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+/* Section spacing */
+.cvSection {
+  margin-bottom: 2.5rem;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.cvSection:last-child {
+  margin-bottom: 0;
+}
+
+/* Highlight card (awards) */
+.highlightCard {
+  border: 1px solid var(--neutral-alpha-medium);
+  border-radius: var(--radius-l);
+  padding: var(--static-space-20);
+  background: var(--surface-background);
+  gap: 0.5rem;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Each experience entry should not break across pages */
+.experienceEntry {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* ==========================================================================
+   PRINT STYLES — produces a clean, professional PDF via browser print.
+   All selectors are wrapped in :global() so CSS Modules treats them as
+   global (non-pure) rules, which is required for element/attribute selectors.
+   ========================================================================== */
+@media print {
+  /* Force a light, printable palette */
+  :global(html),
+  :global(body) {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  /* Hide site chrome (header bar, footer) in printed output */
+  :global(nav),
+  :global(header),
+  :global(footer) {
+    display: none !important;
+  }
+
+  /* Hide the download/print action buttons in printed output */
+  .actionRow {
+    display: none !important;
+  }
+
+  /* Compact spacing for print */
+  .page {
+    padding: 0 !important;
+    gap: 1rem !important;
+  }
+
+  .cvSection {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Keep award cards clean on paper */
+  .highlightCard {
+    box-shadow: none !important;
+    border: 1px solid #dddddd !important;
+  }
+
+  /* Avoid awkward page breaks right after headings */
+  :global(h1),
+  :global(h2),
+  :global(h3) {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+}

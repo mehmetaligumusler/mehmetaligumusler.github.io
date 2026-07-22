@@ -1,0 +1,26 @@
+@use "../breakpoints.scss" as breakpoints;
+
+.hover {
+    transition: var(--transition-micro-medium);
+
+    &:hover {
+        transform: translateX(var(--static-space-4));
+    }
+}
+
+@media (max-width: breakpoints.$s) {
+    .textAlign {
+        text-align: center;
+    }
+
+    .blockAlign {
+        align-self: center;
+    }
+}
+
+.highlightCard {
+    padding: var(--static-space-20);
+    border: 1px solid var(--neutral-alpha-weak);
+    border-radius: var(--radius-l);
+    background: linear-gradient(135deg, var(--brand-alpha-weak), var(--surface-background));
+}

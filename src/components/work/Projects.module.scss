@@ -1,0 +1,29 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+}
+
+@media (max-width: 720px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hover {
+    transition: var(--transition-micro-medium);
+
+    &:hover {
+        transform: translateX(var(--static-space-8));
+
+        .indicator {
+            transform: rotate(0);
+        }
+    }
+}
+
+.indicator {
+    transform: rotate(-90deg);
+    left: -2rem;
+    transition: var(--transition-micro-medium);
+}
